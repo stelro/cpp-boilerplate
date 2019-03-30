@@ -15,7 +15,7 @@ matrix:
           packages:
             - g++-7
       env:
-        - MATRIX_EVAL="CXX_COMPILER=g++-7; sudo update-alternatives"
+        - MATRIX_EVAL="CXX_COMPILER=g++-7"
 
     - os: osx
       osx_image: xcode10.1
