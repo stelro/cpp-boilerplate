@@ -80,14 +80,6 @@ include(Catch)
 catch_discover_tests(${TEST_MAIN})
 
 # --------------------------------------------------------------------------------
-#                         Code Coverage (no change needed).
-# --------------------------------------------------------------------------------
-# If CMake aborts due to missing dependencies for code coverage
-# (gcov, lcov, genhtml and supported compiler), comment this line.
-include(CodeCoverage)
-
-
-# --------------------------------------------------------------------------------
 #                         Documentation (no change needed).
 # --------------------------------------------------------------------------------
 # Add a make target 'doc' to generate API documentation with Doxygen.
@@ -112,8 +104,8 @@ add_custom_target(git_update
         COMMAND git submodule update
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
         )
-add_dependencies(Catch2 git_update)
 
+add_dependencies(Catch2 git_update)
 
 
 # --------------------------------------------------------------------------------
